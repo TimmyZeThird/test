@@ -1,1 +1,1556 @@
-local v0=string.char;local v1=string.byte;local v2=string.sub;local v3=bit32 or bit ;local v4=v3.bxor;local v5=table.concat;local v6=table.insert;local function v7(v24,v25) local v26={};for v41=1, #v24 do v6(v26,v0(v4(v1(v2(v24,v41,v41 + 1 )),v1(v2(v25,1 + (v41% #v25) ,1 + (v41% #v25) + 1 )))%256 ));end return v5(v26);end local v8=tonumber;local v9=string.byte;local v10=string.char;local v11=string.sub;local v12=string.gsub;local v13=string.rep;local v14=table.concat;local v15=table.insert;local v16=math.ldexp;local v17=getfenv or function() return _ENV;end ;local v18=setmetatable;local v19=pcall;local v20=select;local v21=unpack or table.unpack ;local v22=tonumber;local function v23(v27,v28,...) local v29=1;local v30;v27=v12(v11(v27,15 -10 ),v7("\60\15","\235\18\33\23\229\158"),function(v42) if (v9(v42,2)==81) then local v93=0;while true do if (0==v93) then v30=v8(v11(v42,1,1));return "";end end else local v94=0;local v95;while true do if (v94==0) then v95=v10(v8(v42,45 -29 ));if v30 then local v124=0;local v125;while true do if (1==v124) then return v125;end if (v124==0) then v125=v13(v95,v30);v30=nil;v124=1;end end else return v95;end break;end end end end);local function v31(v43,v44,v45) if v45 then local v96=0;local v97;while true do if (v96==0) then v97=(v43/(2^(v44-(1 -0))))%(2^(((v45-1) -(v44-1)) + 1)) ;return v97-(v97%(2 -1)) ;end end else local v98=0;local v99;while true do if (v98==0) then v99=(621 -(555 + 64))^(v44-1) ;return (((v43%(v99 + v99))>=v99) and 1) or 0 ;end end end end local function v32() local v46=0;local v47;while true do if (v46==0) then v47=v9(v27,v29,v29);v29=v29 + 1 ;v46=1;end if (1==v46) then return v47;end end end local function v33() local v48=0;local v49;local v50;while true do if (v48==1) then return (v50 * 256) + v49 ;end if (v48==0) then v49,v50=v9(v27,v29,v29 + (933 -(857 + 74)) );v29=v29 + 2 ;v48=1;end end end local function v34() local v51,v52,v53,v54=v9(v27,v29,v29 + 3 );v29=v29 + 4 ;return (v54 * 16777216) + (v53 * 65536) + (v52 * 256) + v51 ;end local function v35() local v55=0;local v56;local v57;local v58;local v59;local v60;local v61;while true do if (v55==2) then v60=v31(v57,21,958 -(214 + 713) );v61=((v31(v57,32)==1) and  -1) or 1 ;v55=3;end if (v55==3) then if (v60==0) then if (v59==0) then return v61 * 0 ;else local v126=0;while true do if (v126==0) then v60=1 + 0 ;v58=0;break;end end end elseif (v60==2047) then return ((v59==0) and (v61 * (1/0))) or (v61 * NaN) ;end return v16(v61,v60-1023 ) * (v58 + (v59/(2^52))) ;end if (v55==1) then v58=1;v59=(v31(v57,1,20) * (2^(600 -(367 + 201)))) + v56 ;v55=2;end if (v55==0) then v56=v34();v57=v34();v55=1;end end end local function v36(v62) local v63=0;local v64;local v65;while true do if (v63==3) then return v14(v65);end if (v63==1) then v64=v11(v27,v29,(v29 + v62) -1 );v29=v29 + v62 ;v63=2;end if (v63==0) then v64=nil;if  not v62 then local v117=0;while true do if (v117==0) then v62=v34();if (v62==0) then return "";end break;end end end v63=1;end if (v63==2) then v65={};for v103=1, #v64 do v65[v103]=v10(v9(v11(v64,v103,v103)));end v63=3;end end end local v37=v34;local function v38(...) return {...},v20("#",...);end local function v39() local v66=0;local v67;local v68;local v69;local v70;local v71;local v72;while true do if (v66==2) then for v105=1,v34() do local v106=v32();if (v31(v106,1,1)==0) then local v120=0;local v121;local v122;local v123;while true do if (v120==0) then v121=v31(v106,2,3);v122=v31(v106,4,6);v120=1;end if (v120==2) then if (v31(v122,1,1)==1) then v123[2]=v72[v123[2]];end if (v31(v122,2,2 -0 )==1) then v123[3]=v72[v123[3]];end v120=3;end if (v120==1) then v123={v33(),v33(),nil,nil};if (v121==0) then v123[3]=v33();v123[4]=v33();elseif (v121==1) then v123[3]=v34();elseif (v121==2) then v123[3]=v34() -((1639 -(1523 + 114))^16) ;elseif (v121==3) then local v179=0;while true do if (v179==0) then v123[3 + 0 ]=v34() -(2^16) ;v123[4]=v33();break;end end end v120=2;end if (v120==3) then if (v31(v122,1068 -(68 + 997) ,1273 -(226 + 1044) )==1) then v123[4]=v72[v123[17 -13 ]];end v67[v105]=v123;break;end end end end for v107=1,v34() do v68[v107-1 ]=v39();end return v70;end if (v66==1) then v71=v34();v72={};for v109=1,v71 do local v110=v32();local v111;if (v110==1) then v111=v32()~=0 ;elseif (v110==2) then v111=v35();elseif (v110==3) then v111=v36();end v72[v109]=v111;end v70[3]=v32();v66=2;end if (v66==0) then v67={};v68={};v69={};v70={v67,v68,nil,v69};v66=1;end end end local function v40(v73,v74,v75) local v76=v73[1];local v77=v73[2];local v78=v73[3];return function(...) local v79=v76;local v80=v77;local v81=v78;local v82=v38;local v83=1;local v84= -1;local v85={};local v86={...};local v87=v20("#",...) -1 ;local v88={};local v89={};for v100=0,v87 do if (v100>=v81) then v85[v100-v81 ]=v86[v100 + 1 ];else v89[v100]=v86[v100 + 1 ];end end local v90=(v87-v81) + 1 ;local v91;local v92;while true do local v101=0;while true do if (0==v101) then v91=v79[v83];v92=v91[118 -(32 + 85) ];v101=1;end if (v101==1) then if (v92<=(19 + 0)) then if (v92<=9) then if (v92<=4) then if (v92<=1) then if (v92==0) then v89[v91[2]]=v74[v91[3]];elseif (v89[v91[2]]==v91[4]) then v83=v83 + 1 + 0 ;else v83=v91[3];end elseif (v92<=2) then do return v89[v91[2]]();end elseif (v92>3) then local v181=0;local v182;local v183;local v184;while true do if (v181==2) then for v235=1,v91[4] do local v236=0;local v237;while true do if (v236==1) then if (v237[1]==12) then v184[v235-1 ]={v89,v237[3]};else v184[v235-1 ]={v74,v237[3]};end v88[ #v88 + 1 ]=v184;break;end if (v236==0) then v83=v83 + 1 ;v237=v79[v83];v236=1;end end end v89[v91[959 -(892 + 65) ]]=v40(v182,v183,v75);break;end if (v181==0) then v182=v80[v91[3]];v183=nil;v181=1;end if (v181==1) then v184={};v183=v18({},{[v7("\111\133\200\181\84\191\217","\219\48\218\161")]=function(v238,v239) local v240=v184[v239];return v240[1][v240[2]];end,[v7("\219\78\114\76\204\70\238\224\116\100","\128\132\17\28\41\187\47")]=function(v241,v242,v243) local v244=0;local v245;while true do if (v244==0) then v245=v184[v242];v245[1][v245[2]]=v243;break;end end end});v181=2;end end else local v185=0;local v186;local v187;while true do if (0==v185) then v186=v91[2];v187=v89[v186];v185=1;end if (v185==1) then for v246=v186 + 1 ,v84 do v15(v187,v89[v246]);end break;end end end elseif (v92<=(14 -8)) then if (v92>5) then do return v89[v91[2]]();end else local v140=v91[2];local v141=v89[v140];for v174=v140 + 1 ,v84 do v15(v141,v89[v174]);end end elseif (v92<=(12 -5)) then for v175=v91[2],v91[3] do v89[v175]=nil;end elseif (v92==8) then v83=v91[3];elseif (v89[v91[2]]==v91[4]) then v83=v83 + 1 ;else v83=v91[3];end elseif (v92<=14) then if (v92<=11) then if (v92>(18 -8)) then do return;end else local v142=0;local v143;local v144;local v145;local v146;while true do if (v142==1) then v84=(v145 + v143) -1 ;v146=0;v142=2;end if (v142==2) then for v216=v143,v84 do local v217=0;while true do if (v217==0) then v146=v146 + 1 ;v89[v216]=v144[v146];break;end end end break;end if (0==v142) then v143=v91[2];v144,v145=v82(v89[v143](v21(v89,v143 + 1 ,v91[3])));v142=1;end end end elseif (v92<=12) then v89[v91[352 -(87 + 263) ]]=v89[v91[183 -(67 + 113) ]];elseif (v92==13) then local v189=v91[2];v89[v189]=v89[v189](v21(v89,v189 + 1 + 0 ,v91[3]));else local v191=0;local v192;while true do if (0==v191) then v192=v91[2];do return v21(v89,v192,v84);end break;end end end elseif (v92<=16) then if (v92>15) then if v89[v91[2]] then v83=v83 + 1 ;else v83=v91[3];end else v89[v91[4 -2 ]]=v75[v91[3]];end elseif (v92<=17) then v89[v91[2]]=v91[3];elseif (v92==18) then local v194=v91[2 + 0 ];do return v89[v194](v21(v89,v194 + 1 ,v91[3]));end else local v195=0;local v196;while true do if (v195==0) then v196=v91[2];v89[v196]=v89[v196](v21(v89,v196 + 1 ,v84));break;end end end elseif (v92<=29) then if (v92<=24) then if (v92<=(83 -62)) then if (v92>20) then v89[v91[2]]=v40(v80[v91[3]],nil,v75);else local v154=0;local v155;while true do if (v154==0) then v155=v91[2];do return v89[v155](v21(v89,v155 + 1 ,v91[3]));end break;end end end elseif (v92<=22) then local v156=0;local v157;local v158;local v159;local v160;while true do if (v156==2) then for v218=v157,v84 do local v219=0;while true do if (v219==0) then v160=v160 + 1 ;v89[v218]=v158[v160];break;end end end break;end if (v156==1) then v84=(v159 + v157) -(2 -1) ;v160=0;v156=2;end if (v156==0) then v157=v91[954 -(802 + 150) ];v158,v159=v82(v89[v157](v21(v89,v157 + 1 ,v91[3])));v156=1;end end elseif (v92>23) then if v89[v91[2]] then v83=v83 + 1 ;else v83=v91[3];end else local v197=0;local v198;local v199;local v200;while true do if (v197==1) then v200={};v199=v18({},{[v7("\62\13\15\52\89\4\42","\61\97\82\102\90")]=function(v247,v248) local v249=0;local v250;while true do if (0==v249) then v250=v200[v248];return v250[1][v250[2]];end end end,[v7("\147\17\165\78\208\94\16\13\169\54","\105\204\78\203\43\167\55\126")]=function(v251,v252,v253) local v254=0;local v255;while true do if (v254==0) then v255=v200[v252];v255[1][v255[2]]=v253;break;end end end});v197=2;end if (v197==2) then for v256=1 -0 ,v91[4] do local v257=0;local v258;while true do if (v257==0) then v83=v83 + 1 ;v258=v79[v83];v257=1;end if (1==v257) then if (v258[1]==(9 + 3)) then v200[v256-1 ]={v89,v258[3]};else v200[v256-1 ]={v74,v258[3]};end v88[ #v88 + (998 -(915 + 82)) ]=v200;break;end end end v89[v91[2]]=v40(v198,v199,v75);break;end if (v197==0) then v198=v80[v91[3]];v199=nil;v197=1;end end end elseif (v92<=26) then if (v92==(70 -45)) then v89[v91[2]]=v89[v91[2 + 1 ]][v91[4]];else v83=v91[3];end elseif (v92<=(35 -8)) then for v177=v91[1189 -(1069 + 118) ],v91[3] do v89[v177]=nil;end elseif (v92>28) then local v201=0;local v202;while true do if (0==v201) then v202=v91[2];v89[v202]=v89[v202](v21(v89,v202 + 1 ,v84));break;end end else do return;end end elseif (v92<=34) then if (v92<=31) then if (v92==30) then v89[v91[2]]=v89[v91[3]][v91[4]];else v89[v91[2]]={};end elseif (v92<=32) then v89[v91[2]]=v89[v91[3]];elseif (v92>33) then v89[v91[2]]=v75[v91[3]];else v89[v91[2]]=v74[v91[3]];end elseif (v92<=36) then if (v92>35) then v89[v91[2]]=v91[3];else local v171=0;local v172;while true do if (v171==0) then v172=v91[2];v89[v172]=v89[v172](v21(v89,v172 + 1 ,v91[6 -3 ]));break;end end end elseif (v92<=37) then v89[v91[2]]={};elseif (v92==(82 -44)) then local v207=0;local v208;while true do if (v207==0) then v208=v91[2];do return v21(v89,v208,v84);end break;end end else v89[v91[1 + 1 ]]=v40(v80[v91[3]],nil,v75);end v83=v83 + (1 -0) ;break;end end end end;end return v40(v39(),{},v28)(...);end return v23(v7("\137\133\15\95\67\80\148\96\245\250\115\77\67\82\148\96\245\250\116\77\68\80\144\3\243\243\117\59\69\83\151\2\245\255\112\47\67\84\145\117\243\251\116\74\69\87\145\9\245\249\115\70\64\53\151\1\242\254\117\56\69\33\144\4\243\142\117\76\69\81\144\3\245\249\115\75\64\53\151\1\242\250\117\77\69\85\149\96\243\137\115\78\67\32\148\96\245\250\114\76\65\86\148\96\245\250\115\79\64\53\151\1\247\250\114\71\70\53\151\1\245\248\115\78\66\86\149\3\245\250\115\79\67\84\151\2\246\155\115\78\66\86\149\3\245\250\115\76\67\84\151\5\246\155\115\78\67\82\150\6\245\250\115\77\64\53\151\1\245\251\115\78\67\80\149\96\245\250\115\61\64\53\151\1\245\251\119\47\67\84\151\114\253\155\115\78\67\39\148\96\245\250\115\76\71\53\151\1\245\137\112\47\67\84\151\2\241\155\115\78\65\84\151\1\245\254\115\78\67\87\147\96\245\250\115\72\67\84\151\5\245\250\115\79\71\53\151\1\245\143\115\78\67\80\145\96\245\250\114\61\64\53\151\1\245\251\112\47\67\84\151\0\246\155\115\78\67\80\148\96\245\250\115\76\68\53\151\1\241\250\115\77\67\81\148\96\245\250\112\63\65\81\145\5\247\136\112\63\65\53\151\2\246\155\115\78\65\81\145\5\247\136\115\76\69\53\151\1\131\250\112\56\67\84\150\115\246\155\115\78\67\86\149\6\253\155\115\78\65\85\151\1\245\251\117\47\67\84\149\0\245\250\115\76\67\84\151\0\241\155\115\78\65\85\151\1\245\249\115\78\67\85\147\96\245\250\113\75\67\84\151\5\243\155\115\78\65\85\151\1\245\255\115\78\67\86\147\96\245\250\113\78\67\84\151\7\243\155\115\78\66\38\151\1\245\253\115\78\67\83\147\96\245\250\114\72\67\84\151\4\245\250\115\73\71\53\151\1\245\249\115\78\67\80\148\96\245\250\115\79\67\84\149\1\244\243\115\78\67\80\151\1\245\254\115\78\67\85\151\1\244\248\113\74\67\84\151\4\245\250\115\76\71\53\151\1\247\249\115\78\67\87\151\1\245\255\115\78\67\86\151\1\244\248\113\74\67\84\151\5\245\250\115\77\71\53\151\1\244\252\115\78\67\86\151\1\245\254\119\47\67\84\150\117\245\250\115\79\64\53\151\1\245\248\115\78\65\82\151\0\245\250\115\79\67\84\150\6\245\250\115\79\67\84\151\5\245\250\115\74\66\37\148\96\245\250\114\73\67\84\151\0\247\155\115\78\65\84\151\1\245\251\117\47\67\84\149\4\245\250\115\76\69\53\151\1\244\254\115\78\67\85\151\1\245\248\119\47\67\84\151\116\245\250\115\79\70\53\151\1\245\254\114\63\64\53\151\1\244\139\115\78\67\85\149\96\245\250\113\79\67\84\151\0\245\250\115\77\71\53\151\1\245\252\115\78\67\85\151\1\245\251\119\47\67\84\151\116\245\250\115\79\69\53\151\1\244\137\112\47\67\84\151\0\246\155\115\78\67\85\148\96\245\250\115\79\64\53\151\1\245\248\117\47\67\84\225\1\246\140\115\79\67\81\148\96\245\250\115\72\66\92\148\96\245\250\115\77\67\84\151\0\246\155\115\78\67\80\150\112\246\155\115\78\67\87\151\1\245\251\115\78\67\80\150\112\246\155\115\78\67\80\151\1\245\251\115\78\65\84\150\8\245\250\115\79\64\53\151\1\245\251\113\47\67\84\150\114\246\155\115\78\67\85\144\96\245\250","\49\197\202\67\126\115\100\167"),v17(),...);
+-- Generated using RoadToGlory's Converter v1.1 (RoadToGlory#9879)
+
+-- Instances:
+
+local Converted = {
+	["_PlayerGui"] = Instance.new("ScreenGui");
+	["_Background"] = Instance.new("Frame");
+	["_Gradient3"] = Instance.new("Frame");
+	["_UIGradient"] = Instance.new("UIGradient");
+	["_SidePanel"] = Instance.new("Frame");
+	["_UICorner"] = Instance.new("UICorner");
+	["_Frame"] = Instance.new("Frame");
+	["_UICorner1"] = Instance.new("UICorner");
+	["_Gradient2"] = Instance.new("Frame");
+	["_UIGradient1"] = Instance.new("UIGradient");
+	["_Gradient1"] = Instance.new("Frame");
+	["_UIGradient2"] = Instance.new("UIGradient");
+	["_CodeEditor"] = Instance.new("ScrollingFrame");
+	["_Frame1"] = Instance.new("Frame");
+	["_LineHandler"] = Instance.new("LocalScript");
+	["_UIListLayout"] = Instance.new("UIListLayout");
+	["_Code"] = Instance.new("TextBox");
+	["_UIPadding"] = Instance.new("UIPadding");
+	["_Highlight"] = Instance.new("TextLabel");
+	["_UIPadding1"] = Instance.new("UIPadding");
+	["_LocalScript"] = Instance.new("LocalScript");
+	["_Handler"] = Instance.new("LocalScript");
+	["_Highlighter"] = Instance.new("ModuleScript");
+	["_lexer"] = Instance.new("ModuleScript");
+	["_language"] = Instance.new("ModuleScript");
+	["_theme"] = Instance.new("ModuleScript");
+	["_types"] = Instance.new("ModuleScript");
+	["_utility"] = Instance.new("ModuleScript");
+	["_Buttons"] = Instance.new("Frame");
+	["_Execute"] = Instance.new("TextButton");
+	["_UICorner2"] = Instance.new("UICorner");
+	["_ImageLabel"] = Instance.new("ImageLabel");
+	["_ExecutionHandler"] = Instance.new("LocalScript");
+	["_Loadstring"] = Instance.new("ModuleScript");
+	["_FiOne"] = Instance.new("ModuleScript");
+	["_Yueliang"] = Instance.new("ModuleScript");
+	["_Clear"] = Instance.new("TextButton");
+	["_UICorner3"] = Instance.new("UICorner");
+	["_ImageLabel1"] = Instance.new("ImageLabel");
+	["_LocalScript1"] = Instance.new("LocalScript");
+	["_Open"] = Instance.new("TextButton");
+	["_UICorner4"] = Instance.new("UICorner");
+	["_ImageLabel2"] = Instance.new("ImageLabel");
+	["_ExecuteFile"] = Instance.new("TextButton");
+	["_UICorner5"] = Instance.new("UICorner");
+	["_ImageLabel3"] = Instance.new("ImageLabel");
+	["_Save"] = Instance.new("TextButton");
+	["_UICorner6"] = Instance.new("UICorner");
+	["_ImageLabel4"] = Instance.new("ImageLabel");
+	["_Stroke"] = Instance.new("Frame");
+	["_TopBar"] = Instance.new("Frame");
+	["_UICorner7"] = Instance.new("UICorner");
+	["_Frame2"] = Instance.new("Frame");
+	["_ImageLabel5"] = Instance.new("ImageLabel");
+	["_TextLabel"] = Instance.new("TextLabel");
+	["_TextLabel1"] = Instance.new("TextLabel");
+	["_Frame3"] = Instance.new("Frame");
+	["_Code1"] = Instance.new("ImageButton");
+	["_UIListLayout1"] = Instance.new("UIListLayout");
+	["_UIPadding2"] = Instance.new("UIPadding");
+	["_Settings"] = Instance.new("ImageButton");
+	["_Theme"] = Instance.new("ImageButton");
+	["_Settings1"] = Instance.new("ImageButton");
+	["_ImageButton"] = Instance.new("ImageButton");
+	["_KeybindPopup"] = Instance.new("LocalScript");
+	["_LocalScript2"] = Instance.new("LocalScript");
+	["_DragScript"] = Instance.new("LocalScript");
+	["_InjectedNotifyScript"] = Instance.new("LocalScript");
+	["_Open1"] = Instance.new("LocalScript");
+}
+
+-- Properties:
+
+Converted["_PlayerGui"].ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Converted["_PlayerGui"].Name = "PlayerGui"
+Converted["_PlayerGui"].Parent = game:GetService("CoreGui")
+
+Converted["_Background"].BackgroundColor3 = Color3.fromRGB(28.000000230968, 28.000000230968, 28.000000230968)
+Converted["_Background"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Background"].BorderSizePixel = 0
+Converted["_Background"].Position = UDim2.new(0.20681411, 0, 0.25241676, 0)
+Converted["_Background"].Size = UDim2.new(0, 980, 0, 460)
+Converted["_Background"].Name = "Background"
+Converted["_Background"].Parent = Converted["_PlayerGui"]
+
+Converted["_Gradient3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Gradient3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Gradient3"].BorderSizePixel = 0
+Converted["_Gradient3"].Position = UDim2.new(-0.00102040812, 0, 0.206521735, 0)
+Converted["_Gradient3"].Size = UDim2.new(0, 980, 0, 24)
+Converted["_Gradient3"].Name = "Gradient3"
+Converted["_Gradient3"].Parent = Converted["_Background"]
+
+Converted["_UIGradient"].Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 0, 0)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))
+}
+Converted["_UIGradient"].Rotation = 90
+Converted["_UIGradient"].Transparency = NumberSequence.new{
+	NumberSequenceKeypoint.new(0, 0.7133333086967468),
+	NumberSequenceKeypoint.new(1, 1)
+}
+Converted["_UIGradient"].Parent = Converted["_Gradient3"]
+
+Converted["_SidePanel"].BackgroundColor3 = Color3.fromRGB(33.00000183284283, 33.00000183284283, 32.00000189244747)
+Converted["_SidePanel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_SidePanel"].BorderSizePixel = 0
+Converted["_SidePanel"].Position = UDim2.new(0.790816307, 0, 0.156521738, 0)
+Converted["_SidePanel"].Size = UDim2.new(0, 205, 0, 388)
+Converted["_SidePanel"].Name = "SidePanel"
+Converted["_SidePanel"].Parent = Converted["_Background"]
+
+Converted["_UICorner"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner"].Parent = Converted["_SidePanel"]
+
+Converted["_Frame"].BackgroundColor3 = Color3.fromRGB(33.00000183284283, 33.00000183284283, 32.00000189244747)
+Converted["_Frame"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame"].BorderSizePixel = 0
+Converted["_Frame"].Position = UDim2.new(-0.00430580694, 0, -0.000694668153, 0)
+Converted["_Frame"].Size = UDim2.new(0, 19, 0, 388)
+Converted["_Frame"].Parent = Converted["_SidePanel"]
+
+Converted["_UICorner1"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner1"].Parent = Converted["_Background"]
+
+Converted["_Gradient2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Gradient2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Gradient2"].BorderSizePixel = 0
+Converted["_Gradient2"].Position = UDim2.new(0, 0, 0.356521726, 0)
+Converted["_Gradient2"].Size = UDim2.new(0, 774, 0, 244)
+Converted["_Gradient2"].Name = "Gradient2"
+Converted["_Gradient2"].Parent = Converted["_Background"]
+
+Converted["_UIGradient1"].Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 0, 0)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(25.000000409781933, 25.000000409781933, 25.000000409781933))
+}
+Converted["_UIGradient1"].Rotation = 90
+Converted["_UIGradient1"].Transparency = NumberSequence.new{
+	NumberSequenceKeypoint.new(0, 1),
+	NumberSequenceKeypoint.new(1, 0)
+}
+Converted["_UIGradient1"].Parent = Converted["_Gradient2"]
+
+Converted["_Gradient1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Gradient1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Gradient1"].BorderSizePixel = 0
+Converted["_Gradient1"].Position = UDim2.new(0.771428585, 0, 0.206521735, 0)
+Converted["_Gradient1"].Size = UDim2.new(0, 19, 0, 364)
+Converted["_Gradient1"].Name = "Gradient1"
+Converted["_Gradient1"].Parent = Converted["_Background"]
+
+Converted["_UIGradient2"].Color = ColorSequence.new{
+	ColorSequenceKeypoint.new(0, Color3.fromRGB(0, 0, 0)),
+	ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 0, 0))
+}
+Converted["_UIGradient2"].Rotation = 180
+Converted["_UIGradient2"].Transparency = NumberSequence.new{
+	NumberSequenceKeypoint.new(0, 0.7133333086967468),
+	NumberSequenceKeypoint.new(1, 1)
+}
+Converted["_UIGradient2"].Parent = Converted["_Gradient1"]
+
+Converted["_CodeEditor"].AutomaticCanvasSize = Enum.AutomaticSize.XY
+Converted["_CodeEditor"].BottomImage = "rbxassetid://5234388158"
+Converted["_CodeEditor"].BottomImageContent = Content{SourceType=Uri, Uri=rbxassetid://5234388158}
+Converted["_CodeEditor"].CanvasSize = UDim2.new(0, 0, 0.850000024, 0)
+Converted["_CodeEditor"].MidImage = "rbxassetid://5234388158"
+Converted["_CodeEditor"].MidImageContent = Content{SourceType=Uri, Uri=rbxassetid://5234388158}
+Converted["_CodeEditor"].ScrollBarImageColor3 = Color3.fromRGB(134.00000721216202, 134.00000721216202, 134.00000721216202)
+Converted["_CodeEditor"].ScrollBarImageTransparency = 0.699999988079071
+Converted["_CodeEditor"].ScrollBarThickness = 8
+Converted["_CodeEditor"].TopImage = "rbxassetid://5234388158"
+Converted["_CodeEditor"].TopImageContent = Content{SourceType=Uri, Uri=rbxassetid://5234388158}
+Converted["_CodeEditor"].Active = true
+Converted["_CodeEditor"].BackgroundColor3 = Color3.fromRGB(45.00000111758709, 45.00000111758709, 45.00000111758709)
+Converted["_CodeEditor"].BackgroundTransparency = 1
+Converted["_CodeEditor"].BorderColor3 = Color3.fromRGB(45.00000111758709, 45.00000111758709, 45.00000111758709)
+Converted["_CodeEditor"].Position = UDim2.new(-1.24561538e-07, 0, 0.206843108, 0)
+Converted["_CodeEditor"].Size = UDim2.new(0, 774, 0, 311)
+Converted["_CodeEditor"].Name = "CodeEditor"
+Converted["_CodeEditor"].Parent = Converted["_Background"]
+
+Converted["_Frame1"].AutomaticSize = Enum.AutomaticSize.Y
+Converted["_Frame1"].BackgroundColor3 = Color3.fromRGB(39.00000147521496, 39.00000147521496, 39.00000147521496)
+Converted["_Frame1"].BackgroundTransparency = 1
+Converted["_Frame1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame1"].BorderSizePixel = 0
+Converted["_Frame1"].Size = UDim2.new(0, 50, 2, 0)
+Converted["_Frame1"].Parent = Converted["_CodeEditor"]
+
+Converted["_UIListLayout"].ItemLineAlignment = Enum.ItemLineAlignment.End
+Converted["_UIListLayout"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout"].Parent = Converted["_Frame1"]
+
+Converted["_Code"].ClearTextOnFocus = false
+Converted["_Code"].CursorPosition = -1
+Converted["_Code"].Font = Enum.Font.Unknown
+Converted["_Code"].MultiLine = true
+Converted["_Code"].Text = ""
+Converted["_Code"].TextColor3 = Color3.fromRGB(220.00000208616257, 220.00000208616257, 220.00000208616257)
+Converted["_Code"].TextSize = 14
+Converted["_Code"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_Code"].TextYAlignment = Enum.TextYAlignment.Top
+Converted["_Code"].AutomaticSize = Enum.AutomaticSize.XY
+Converted["_Code"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Code"].BackgroundTransparency = 1
+Converted["_Code"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Code"].BorderSizePixel = 0
+Converted["_Code"].Position = UDim2.new(0.0719773248, 0, 0, 0)
+Converted["_Code"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Code"].ZIndex = -1
+Converted["_Code"].Name = "Code"
+Converted["_Code"].Parent = Converted["_CodeEditor"]
+
+Converted["_UIPadding"].PaddingLeft = UDim.new(0, 6)
+Converted["_UIPadding"].Parent = Converted["_Code"]
+
+Converted["_Highlight"].Font = Enum.Font.Unknown
+Converted["_Highlight"].Text = ""
+Converted["_Highlight"].TextColor3 = Color3.fromRGB(220.00000208616257, 220.00000208616257, 220.00000208616257)
+Converted["_Highlight"].TextSize = 14
+Converted["_Highlight"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_Highlight"].TextYAlignment = Enum.TextYAlignment.Top
+Converted["_Highlight"].AutomaticSize = Enum.AutomaticSize.XY
+Converted["_Highlight"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Highlight"].BackgroundTransparency = 1
+Converted["_Highlight"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Highlight"].BorderSizePixel = 0
+Converted["_Highlight"].Position = UDim2.new(0.0719997212, 0, 0, 0)
+Converted["_Highlight"].Size = UDim2.new(1, 0, 1, 0)
+Converted["_Highlight"].Name = "Highlight"
+Converted["_Highlight"].Parent = Converted["_CodeEditor"]
+
+Converted["_UIPadding1"].PaddingLeft = UDim.new(0, 6)
+Converted["_UIPadding1"].Parent = Converted["_Highlight"]
+
+Converted["_Buttons"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Buttons"].BackgroundTransparency = 1
+Converted["_Buttons"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Buttons"].BorderSizePixel = 0
+Converted["_Buttons"].Position = UDim2.new(0, 5, 0.923411489, -5)
+Converted["_Buttons"].Size = UDim2.new(0, 769, 0, 34)
+Converted["_Buttons"].Name = "Buttons"
+Converted["_Buttons"].Parent = Converted["_Background"]
+
+Converted["_Execute"].Font = Enum.Font.SourceSans
+Converted["_Execute"].Text = "Execute"
+Converted["_Execute"].TextColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_Execute"].TextSize = 14
+Converted["_Execute"].BackgroundColor3 = Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)
+Converted["_Execute"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Execute"].BorderSizePixel = 0
+Converted["_Execute"].Size = UDim2.new(0, 95, 0, 35)
+Converted["_Execute"].Name = "Execute"
+Converted["_Execute"].Parent = Converted["_Buttons"]
+
+Converted["_UICorner2"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner2"].Parent = Converted["_Execute"]
+
+Converted["_ImageLabel"].Image = "rbxassetid://109292590008276"
+Converted["_ImageLabel"].ImageColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_ImageLabel"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://109292590008276}
+Converted["_ImageLabel"].ScaleType = Enum.ScaleType.Fit
+Converted["_ImageLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel"].BackgroundTransparency = 1
+Converted["_ImageLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel"].BorderSizePixel = 0
+Converted["_ImageLabel"].Position = UDim2.new(0, 6, 0, 0)
+Converted["_ImageLabel"].Size = UDim2.new(0, 23, 0, 35)
+Converted["_ImageLabel"].Parent = Converted["_Execute"]
+
+Converted["_Clear"].Font = Enum.Font.SourceSans
+Converted["_Clear"].Text = "Clear"
+Converted["_Clear"].TextColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_Clear"].TextSize = 14
+Converted["_Clear"].BackgroundColor3 = Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)
+Converted["_Clear"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Clear"].BorderSizePixel = 0
+Converted["_Clear"].Position = UDim2.new(0.130039006, 0, -0.0294117648, 0)
+Converted["_Clear"].Size = UDim2.new(0, 95, 0, 35)
+Converted["_Clear"].Name = "Clear"
+Converted["_Clear"].Parent = Converted["_Buttons"]
+
+Converted["_UICorner3"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner3"].Parent = Converted["_Clear"]
+
+Converted["_ImageLabel1"].Image = "rbxassetid://115335545782295"
+Converted["_ImageLabel1"].ImageColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_ImageLabel1"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://115335545782295}
+Converted["_ImageLabel1"].ScaleType = Enum.ScaleType.Fit
+Converted["_ImageLabel1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel1"].BackgroundTransparency = 1
+Converted["_ImageLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel1"].BorderSizePixel = 0
+Converted["_ImageLabel1"].Position = UDim2.new(0, 6, 0, 0)
+Converted["_ImageLabel1"].Size = UDim2.new(0, 23, 0, 35)
+Converted["_ImageLabel1"].Parent = Converted["_Clear"]
+
+Converted["_Open"].Font = Enum.Font.SourceSans
+Converted["_Open"].Text = "Open"
+Converted["_Open"].TextColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_Open"].TextSize = 14
+Converted["_Open"].BackgroundColor3 = Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)
+Converted["_Open"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Open"].BorderSizePixel = 0
+Converted["_Open"].Position = UDim2.new(0.260078013, 0, -0.0294117648, 0)
+Converted["_Open"].Size = UDim2.new(0, 95, 0, 35)
+Converted["_Open"].Name = "Open"
+Converted["_Open"].Parent = Converted["_Buttons"]
+
+Converted["_UICorner4"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner4"].Parent = Converted["_Open"]
+
+Converted["_ImageLabel2"].Image = "rbxassetid://132233084740467"
+Converted["_ImageLabel2"].ImageColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_ImageLabel2"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://132233084740467}
+Converted["_ImageLabel2"].ScaleType = Enum.ScaleType.Fit
+Converted["_ImageLabel2"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel2"].BackgroundTransparency = 1
+Converted["_ImageLabel2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel2"].BorderSizePixel = 0
+Converted["_ImageLabel2"].Position = UDim2.new(0, 6, 0, 0)
+Converted["_ImageLabel2"].Size = UDim2.new(0, 23, 0, 35)
+Converted["_ImageLabel2"].Parent = Converted["_Open"]
+
+Converted["_ExecuteFile"].Font = Enum.Font.SourceSans
+Converted["_ExecuteFile"].Text = "Execute"
+Converted["_ExecuteFile"].TextColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_ExecuteFile"].TextSize = 14
+Converted["_ExecuteFile"].BackgroundColor3 = Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)
+Converted["_ExecuteFile"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ExecuteFile"].BorderSizePixel = 0
+Converted["_ExecuteFile"].Position = UDim2.new(0.390117049, 0, -0.0294117648, 0)
+Converted["_ExecuteFile"].Size = UDim2.new(0, 95, 0, 35)
+Converted["_ExecuteFile"].Name = "ExecuteFile"
+Converted["_ExecuteFile"].Parent = Converted["_Buttons"]
+
+Converted["_UICorner5"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner5"].Parent = Converted["_ExecuteFile"]
+
+Converted["_ImageLabel3"].Image = "rbxassetid://110974078662873"
+Converted["_ImageLabel3"].ImageColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_ImageLabel3"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://110974078662873}
+Converted["_ImageLabel3"].ScaleType = Enum.ScaleType.Fit
+Converted["_ImageLabel3"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel3"].BackgroundTransparency = 1
+Converted["_ImageLabel3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel3"].BorderSizePixel = 0
+Converted["_ImageLabel3"].Position = UDim2.new(0, 6, 0, 0)
+Converted["_ImageLabel3"].Size = UDim2.new(0, 23, 0, 35)
+Converted["_ImageLabel3"].Parent = Converted["_ExecuteFile"]
+
+Converted["_Save"].Font = Enum.Font.SourceSans
+Converted["_Save"].Text = "Save"
+Converted["_Save"].TextColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_Save"].TextSize = 14
+Converted["_Save"].BackgroundColor3 = Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)
+Converted["_Save"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Save"].BorderSizePixel = 0
+Converted["_Save"].Position = UDim2.new(0.520156026, 0, -0.0294117648, 0)
+Converted["_Save"].Size = UDim2.new(0, 95, 0, 35)
+Converted["_Save"].Name = "Save"
+Converted["_Save"].Parent = Converted["_Buttons"]
+
+Converted["_UICorner6"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner6"].Parent = Converted["_Save"]
+
+Converted["_ImageLabel4"].Image = "rbxassetid://10734941499"
+Converted["_ImageLabel4"].ImageColor3 = Color3.fromRGB(186.0000041127205, 186.0000041127205, 186.0000041127205)
+Converted["_ImageLabel4"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://10734941499}
+Converted["_ImageLabel4"].ScaleType = Enum.ScaleType.Fit
+Converted["_ImageLabel4"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel4"].BackgroundTransparency = 1
+Converted["_ImageLabel4"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel4"].BorderSizePixel = 0
+Converted["_ImageLabel4"].Position = UDim2.new(0, 9, 0, 0)
+Converted["_ImageLabel4"].Size = UDim2.new(0, 15, 0, 35)
+Converted["_ImageLabel4"].Parent = Converted["_Save"]
+
+Converted["_Stroke"].BackgroundColor3 = Color3.fromRGB(44.000001177191734, 44.000001177191734, 44.000001177191734)
+Converted["_Stroke"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Stroke"].BorderSizePixel = 0
+Converted["_Stroke"].Position = UDim2.new(-0.00510204071, 5, 0.897826076, -5)
+Converted["_Stroke"].Size = UDim2.new(0.790816307, 0, 0, 1)
+Converted["_Stroke"].Name = "Stroke"
+Converted["_Stroke"].Parent = Converted["_Background"]
+
+Converted["_TopBar"].BackgroundColor3 = Color3.fromRGB(33.00000183284283, 33.00000183284283, 32.00000189244747)
+Converted["_TopBar"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TopBar"].BorderSizePixel = 0
+Converted["_TopBar"].Size = UDim2.new(0, 980, 0, 84)
+Converted["_TopBar"].Name = "TopBar"
+Converted["_TopBar"].Parent = Converted["_Background"]
+
+Converted["_UICorner7"].CornerRadius = UDim.new(0, 3)
+Converted["_UICorner7"].Parent = Converted["_TopBar"]
+
+Converted["_Frame2"].BackgroundColor3 = Color3.fromRGB(33.00000183284283, 33.00000183284283, 32.00000189244747)
+Converted["_Frame2"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame2"].BorderSizePixel = 0
+Converted["_Frame2"].Position = UDim2.new(0, 0, 0.989855111, 0)
+Converted["_Frame2"].Size = UDim2.new(0, 980, 0, 12)
+Converted["_Frame2"].Parent = Converted["_TopBar"]
+
+Converted["_ImageLabel5"].Image = "rbxassetid://1505584527"
+Converted["_ImageLabel5"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://1505584527}
+Converted["_ImageLabel5"].ScaleType = Enum.ScaleType.Fit
+Converted["_ImageLabel5"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageLabel5"].BackgroundTransparency = 1
+Converted["_ImageLabel5"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageLabel5"].BorderSizePixel = 0
+Converted["_ImageLabel5"].Position = UDim2.new(0.00816326495, 0, 0.0714285746, 0)
+Converted["_ImageLabel5"].Size = UDim2.new(0, 174, 0, 40)
+Converted["_ImageLabel5"].Parent = Converted["_TopBar"]
+
+Converted["_TextLabel"].Font = Enum.Font.Unknown
+Converted["_TextLabel"].Text = "FE Edition"
+Converted["_TextLabel"].TextColor3 = Color3.fromRGB(185.00000417232513, 185.00000417232513, 185.00000417232513)
+Converted["_TextLabel"].TextSize = 10
+Converted["_TextLabel"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].TextWrapped = true
+Converted["_TextLabel"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_TextLabel"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel"].BackgroundTransparency = 1
+Converted["_TextLabel"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel"].BorderSizePixel = 0
+Converted["_TextLabel"].Position = UDim2.new(0.19183673, 0, 0.34523809, 0)
+Converted["_TextLabel"].Size = UDim2.new(0, 56, 0, 17)
+Converted["_TextLabel"].Parent = Converted["_TopBar"]
+
+Converted["_TextLabel1"].Font = Enum.Font.Unknown
+Converted["_TextLabel1"].Text = "Pre-alpha"
+Converted["_TextLabel1"].TextColor3 = Color3.fromRGB(185.00000417232513, 185.00000417232513, 185.00000417232513)
+Converted["_TextLabel1"].TextSize = 14
+Converted["_TextLabel1"].TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel1"].TextWrapped = true
+Converted["_TextLabel1"].TextXAlignment = Enum.TextXAlignment.Left
+Converted["_TextLabel1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_TextLabel1"].BackgroundTransparency = 1
+Converted["_TextLabel1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_TextLabel1"].BorderSizePixel = 0
+Converted["_TextLabel1"].Position = UDim2.new(0.19183673, 0, 0.142857149, 0)
+Converted["_TextLabel1"].Size = UDim2.new(0, 72, 0, 17)
+Converted["_TextLabel1"].Parent = Converted["_TopBar"]
+
+Converted["_Frame3"].BackgroundColor3 = Color3.fromRGB(33.00000183284283, 33.00000183284283, 32.00000189244747)
+Converted["_Frame3"].BackgroundTransparency = 1
+Converted["_Frame3"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Frame3"].BorderSizePixel = 0
+Converted["_Frame3"].Position = UDim2.new(-3.11403845e-08, 0, 0, 0)
+Converted["_Frame3"].Size = UDim2.new(0, 980, 0, 29)
+Converted["_Frame3"].Parent = Converted["_TopBar"]
+
+Converted["_Code1"].Image = "rbxassetid://10709818847"
+Converted["_Code1"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://10709818847}
+Converted["_Code1"].ScaleType = Enum.ScaleType.Fit
+Converted["_Code1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Code1"].BackgroundTransparency = 1
+Converted["_Code1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Code1"].BorderSizePixel = 0
+Converted["_Code1"].Position = UDim2.new(0.417346925, 0, 0.344827592, 0)
+Converted["_Code1"].Size = UDim2.new(0, 20, 0, 20)
+Converted["_Code1"].Name = "Code"
+Converted["_Code1"].Parent = Converted["_Frame3"]
+
+Converted["_UIListLayout1"].Padding = UDim.new(0, 9)
+Converted["_UIListLayout1"].FillDirection = Enum.FillDirection.Horizontal
+Converted["_UIListLayout1"].HorizontalAlignment = Enum.HorizontalAlignment.Center
+Converted["_UIListLayout1"].SortOrder = Enum.SortOrder.LayoutOrder
+Converted["_UIListLayout1"].Parent = Converted["_Frame3"]
+
+Converted["_UIPadding2"].PaddingTop = UDim.new(0, 5)
+Converted["_UIPadding2"].Parent = Converted["_Frame3"]
+
+Converted["_Settings"].Image = "rbxassetid://10747383470"
+Converted["_Settings"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://10747383470}
+Converted["_Settings"].ScaleType = Enum.ScaleType.Fit
+Converted["_Settings"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Settings"].BackgroundTransparency = 1
+Converted["_Settings"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Settings"].BorderSizePixel = 0
+Converted["_Settings"].Position = UDim2.new(0.417346925, 0, 0.344827592, 0)
+Converted["_Settings"].Size = UDim2.new(0, 20, 0, 20)
+Converted["_Settings"].Name = "Settings"
+Converted["_Settings"].Parent = Converted["_Frame3"]
+
+Converted["_Theme"].Image = "rbxassetid://10734910430"
+Converted["_Theme"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://10734910430}
+Converted["_Theme"].ScaleType = Enum.ScaleType.Fit
+Converted["_Theme"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Theme"].BackgroundTransparency = 1
+Converted["_Theme"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Theme"].BorderSizePixel = 0
+Converted["_Theme"].Position = UDim2.new(0.417346925, 0, 0.344827592, 0)
+Converted["_Theme"].Size = UDim2.new(0, 20, 0, 20)
+Converted["_Theme"].Name = "Theme"
+Converted["_Theme"].Parent = Converted["_Frame3"]
+
+Converted["_Settings1"].Image = "rbxassetid://10709782497"
+Converted["_Settings1"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://10709782497}
+Converted["_Settings1"].ScaleType = Enum.ScaleType.Fit
+Converted["_Settings1"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_Settings1"].BackgroundTransparency = 1
+Converted["_Settings1"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_Settings1"].BorderSizePixel = 0
+Converted["_Settings1"].Position = UDim2.new(0.417346925, 0, 0.344827592, 0)
+Converted["_Settings1"].Size = UDim2.new(0, 20, 0, 20)
+Converted["_Settings1"].Name = "Settings"
+Converted["_Settings1"].Parent = Converted["_Frame3"]
+
+Converted["_ImageButton"].Image = "rbxassetid://10734896206"
+Converted["_ImageButton"].ImageColor3 = Color3.fromRGB(220.00000208616257, 220.00000208616257, 220.00000208616257)
+Converted["_ImageButton"].ImageContent = Content{SourceType=Uri, Uri=rbxassetid://10734896206}
+Converted["_ImageButton"].BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Converted["_ImageButton"].BackgroundTransparency = 1
+Converted["_ImageButton"].BorderColor3 = Color3.fromRGB(0, 0, 0)
+Converted["_ImageButton"].BorderSizePixel = 0
+Converted["_ImageButton"].Position = UDim2.new(0.979591846, -5, 0, 5)
+Converted["_ImageButton"].Size = UDim2.new(0, 20, 0, 20)
+Converted["_ImageButton"].Parent = Converted["_TopBar"]
+
+-- Fake Module Scripts:
+
+local fake_module_scripts = {}
+
+do -- Fake Module: StarterGui.PlayerGui.Background.Buttons.Execute.Loadstring
+    local script = Instance.new("ModuleScript")
+    script.Name = "Loadstring"
+    script.Parent = Converted["_Execute"]
+    local function module_script()
+		--[[
+				For support or to check out our other projects, join us on the Bleu Pigs Discord:
+				https://discord.gg/H73NsjfBbP
+				---------------
+				vLua 5.1 - Lua written in Lua Virtual Machine
+				---------------
+				vLua is a virtual machine and compiler for dynamically compiling and executing Lua.
+				It'll work on both client and server, regardless of LoadStringEnabled. This module is
+				designed to be a drop in replacement for loadstring, meaning you can do the following:
+				
+				Example:
+					local loadstring = require(workspace.Loadstring)
+					local executable, compileFailReason = loadstring("print('hello from vLua!')")
+					executable()
+				
+				Please note, vLua IS SLOWER COMPARED TO vanilla Lua, although Luau does improve performance.
+				Do not attempt to run performance intensive tasks without testing first, otherwise you
+				may have a bad time.
+				
+				Changelog:
+					[8/13/2022]
+						- updated FiOne to latest release - https://github.com/Rerumu/FiOne/commit/b983f11a0a318dae6c7804161b1cbc3aa52a8236
+						- removed link to Minecraft server Discord
+						- added link to Bleu Pigs General Discord
+					[1/18/2022]
+						- updated FiOne to latest release - https://github.com/Rerumu/FiOne/commit/900413a8491a44daa7770d799c85ad6df8610eea
+						- added link to Minecraft server Discord
+					[1/1/2022]
+						- fixed environment not being properly set for compiled function
+					[11/12/2021]
+						- removed previous changelogs
+						- updated FiOne to latest release - https://github.com/Rerumu/FiOne/blob/f443116e947e5bb3fe8bb7e6abca78214a245145/source.lua
+						- fixed attempt to call a nil value error
+				
+				Credits:
+					- FiOne LBI (created by same author as Rerubi) - https://github.com/Rerumu/FiOne
+					- Yueliang 5 (Lua compiler in Lua) - http://yueliang.luaforge.net/
+					- Moonshine (improved version of Yeuliang) - https://github.com/gamesys/moonshine
+		]]
+		local compile = require(script:WaitForChild("Yueliang"))
+		local createExecutable = require(script:WaitForChild("FiOne"))
+		getfenv().script = nil
+		
+		return function(source, env)
+			local executable
+			local env = env or getfenv(2)
+			local name = (env.script and env.script:GetFullName())
+			local ran, failureReason = pcall(function()
+				local compiledBytecode = compile(source, name)
+				executable = createExecutable(compiledBytecode, env)
+			end)
+			
+			if ran then
+				return setfenv(executable, env)
+			end
+			return nil, failureReason
+		end
+    end
+    fake_module_scripts[script] = module_script
+end
+
+-- Fake Local Scripts:
+
+local function EUDY_fake_script() -- Fake Script: StarterGui.PlayerGui.Background.CodeEditor.Frame.LineHandler
+    local script = Instance.new("LocalScript")
+    script.Name = "LineHandler"
+    script.Parent = Converted["_Frame1"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local CodeTextBoxScrolling = script.Parent.Parent
+	local CodeTextBox = CodeTextBoxScrolling.Code
+	local LineNumbersFrame = script.Parent
+	local lineHeight = 14 -- Adjust this to match the line height of your text
+	
+	-- Function to split the text into lines
+	local function getLines(text)
+		local lines = {}
+		if text == "" then
+			table.insert(lines, "")
+		else
+			for line in (text .. "\n"):gmatch("(.-)\n") do
+				table.insert(lines, line)
+			end
+		end
+		return lines
+	end
+	
+	-- Function to update the line numbers based on text content
+	local function updateLineNumbers()
+		local lines = getLines(CodeTextBox.Text)
+	
+		-- Create or reuse labels for each line
+		for i = 1, #lines do
+			local label = LineNumbersFrame:FindFirstChild("LineLabel_" .. i)
+	
+			if not label then
+				label = Instance.new("TextLabel")
+				label.Name = "LineLabel_" .. i
+				label.BackgroundTransparency = 1
+				label.TextXAlignment = Enum.TextXAlignment.Right
+				label.TextColor3 = Color3.fromRGB(255, 255, 255)
+				label.Font = Enum.Font.Code  -- Monospace font
+				label.TextSize = 14
+				label.TextScaled = false
+				label.Size = UDim2.new(0, 30, 0, lineHeight)  -- Fixed size (width: 30, height: 20)
+				label.Parent = LineNumbersFrame
+			end
+	
+			label.Text = tostring(i)
+			label.Position = UDim2.new(0, 0, 0, (i - 1) * lineHeight)  -- Stack vertically with no space in between
+		end
+	
+		-- Remove any extra labels if the number of lines decreases
+		local i = #lines + 1
+		while true do
+			local extra = LineNumbersFrame:FindFirstChild("LineLabel_" .. i)
+			if not extra then break end
+			extra:Destroy()
+			i += 1
+		end
+	end
+	
+	-- Update line numbers whenever text changes
+	CodeTextBox:GetPropertyChangedSignal("Text"):Connect(updateLineNumbers)
+	
+	-- Initial call to set up the line numbers
+	updateLineNumbers()
+end
+local function GHPSFVW_fake_script() -- Fake Script: StarterGui.PlayerGui.Background.CodeEditor.Highlight.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Highlight"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local size = script.Parent.Parent.Code.Size
+	
+	script.Parent.Parent.Code:GetPropertyChangedSignal("Text"):Connect(function()
+		script.Parent.Size = size
+	end)
+end
+local function KVXYY_fake_script() -- Fake Script: StarterGui.PlayerGui.Background.CodeEditor.Handler
+    local script = Instance.new("LocalScript")
+    script.Name = "Handler"
+    script.Parent = Converted["_CodeEditor"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local textbox = script.Parent.Code
+	local HiglightText = script.Parent.Highlight
+	local Highlighter = require(script.Highlighter)
+	
+	
+	textbox:GetPropertyChangedSignal("Text"):Connect(function()
+		HiglightText.Text = textbox.Text
+		wait(0)
+		Highlighter.highlight({
+			textObject = HiglightText
+		})
+		wait(0)
+		Highlighter.refresh({
+			textObject = textbox.Parent.Highlight
+		})
+	end)
+end
+local function UBSQGQ_fake_script() -- Fake Script: StarterGui.PlayerGui.Background.Buttons.Execute.ExecutionHandler
+    local script = Instance.new("LocalScript")
+    script.Name = "ExecutionHandler"
+    script.Parent = Converted["_Execute"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local vLua = require(script.Parent.Loadstring)
+	
+	local function executeWithVlua(code)
+		if not code or code:match("^%s*$") then 
+			game:GetService('TestService'):Message("[Synapse FE] Code box is empty")
+			return 
+		end
+	
+		local success, result = pcall(function()
+			-- vLua returns the function directly, just like normal loadstring
+			local func = vLua(code)   -- or vLua(code, getfenv()) if you want custom env
+			if typeof(func) == "function" then
+				func()   -- run it
+			else
+				error("vLua did not return a function")
+			end
+		end)
+	
+		if not success then
+			warn("[Synapse FE] Error: " .. tostring(result))
+			
+			-- Instances: 10 | Scripts: 3 | Modules: 0 | Tags: 0
+			local G2L = {};
+	
+			-- StarterGui.ExecError
+			G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+			G2L["1"]["Enabled"] = true;
+			G2L["1"]["Name"] = [[ExecError]];
+			G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+			G2L["1"]["ResetOnSpawn"] = false;
+	
+	
+			-- StarterGui.ExecError.Frame
+			G2L["2"] = Instance.new("Frame", G2L["1"]);
+			G2L["2"]["BorderSizePixel"] = 0;
+			G2L["2"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 33);
+			G2L["2"]["AnchorPoint"] = Vector2.new(1, 1);
+			G2L["2"]["Size"] = UDim2.new(0, 266, 0, 96);
+			G2L["2"]["Position"] = UDim2.new(1, 266, 1, -5);
+			G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+	
+	
+			-- StarterGui.ExecError.Frame.Gradient
+			G2L["3"] = Instance.new("Frame", G2L["2"]);
+			G2L["3"]["BorderSizePixel"] = 0;
+			G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["3"]["Size"] = UDim2.new(1, 0, 1, 0);
+			G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["3"]["Name"] = [[Gradient]];
+	
+	
+			-- StarterGui.ExecError.Frame.Gradient.UIGradient
+			G2L["4"] = Instance.new("UIGradient", G2L["3"]);
+			G2L["4"]["Rotation"] = 90;
+			G2L["4"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 1),NumberSequenceKeypoint.new(1.000, 0)};
+			G2L["4"]["Offset"] = Vector2.new(-0.00454, 0.375);
+			G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+	
+	
+			-- StarterGui.ExecError.Frame.UICorner
+			G2L["5"] = Instance.new("UICorner", G2L["2"]);
+			G2L["5"]["CornerRadius"] = UDim.new(0, 3);
+	
+	
+			-- StarterGui.ExecError.Frame.ImageLabel
+			G2L["6"] = Instance.new("ImageLabel", G2L["2"]);
+			G2L["6"]["BorderSizePixel"] = 0;
+			G2L["6"]["ScaleType"] = Enum.ScaleType.Fit;
+			G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+			G2L["6"]["ImageColor3"] = Color3.fromRGB(255, 86, 86);
+			G2L["6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+			G2L["6"]["Image"] = [[rbxassetid://10723415903]];
+			G2L["6"]["Size"] = UDim2.new(0, 52, 0, 52);
+			G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["6"]["BackgroundTransparency"] = 1;
+			G2L["6"]["Position"] = UDim2.new(0, 231, 0, 47);
+	
+	
+			-- StarterGui.ExecError.Frame.TextLabel
+			G2L["7"] = Instance.new("TextLabel", G2L["2"]);
+			G2L["7"]["BorderSizePixel"] = 0;
+			G2L["7"]["TextSize"] = 12;
+			G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+			G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["7"]["FontFace"] = Font.new([[rbxassetid://12187361718]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["7"]["TextColor3"] = Color3.fromRGB(221, 221, 221);
+			G2L["7"]["BackgroundTransparency"] = 1;
+			G2L["7"]["Size"] = UDim2.new(0, 193, 0, 52);
+			G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["7"]["Text"] = [[Failed to Execute Script]];
+			G2L["7"]["Position"] = UDim2.new(0, 10, 0.21875, 0);
+	
+	
+			-- StarterGui.ExecError.Frame.FadeOut
+			G2L["8"] = Instance.new("LocalScript", G2L["2"]);
+			G2L["8"]["Name"] = [[FadeOut]];
+	
+	
+			-- StarterGui.ExecError.Frame.MoveIn
+			G2L["9"] = Instance.new("LocalScript", G2L["2"]);
+			G2L["9"]["Name"] = [[MoveIn]];
+	
+	
+			-- StarterGui.ExecError.Frame.Deletion
+			G2L["a"] = Instance.new("LocalScript", G2L["2"]);
+			G2L["a"]["Name"] = [[Deletion]];
+	
+	
+			-- StarterGui.ExecError.Frame.FadeOut
+			local function C_8()
+				local script = G2L["8"];
+				local TweenService = game:GetService('TweenService')
+				local Frame1 = script.Parent
+				local Gradient = Frame1.Gradient.UIGradient
+				local Image = Frame1.ImageLabel
+				local Text = Frame1.TextLabel
+	
+				-- Wait 5 seconds before starting the fade
+				wait(5)
+	
+				Gradient.Rotation = -90
+	
+				-- Fade out the Frame background
+				TweenService:Create(
+					Frame1,
+					TweenInfo.new(2),
+					{BackgroundTransparency = 1} -- fully transparent
+				):Play()
+	
+				-- Make the gradient fade properly
+				local value = Instance.new("NumberValue")
+				value.Value = 0 -- start fully visible
+	
+				value:GetPropertyChangedSignal("Value"):Connect(function()
+					Gradient.Transparency = NumberSequence.new({
+						NumberSequenceKeypoint.new(0, value.Value), -- start of gradient
+						NumberSequenceKeypoint.new(1, 1)           -- end of gradient (time = 1)
+					})
+				end)
+	
+				-- Tween the gradient to fade out over 2 seconds
+				TweenService:Create(value, TweenInfo.new(2), {Value = 1}):Play()
+	
+				-- Fade out Image and Text
+				TweenService:Create(
+					Image,
+					TweenInfo.new(2),
+					{ImageTransparency = 1}
+				):Play()
+	
+				TweenService:Create(
+					Text,
+					TweenInfo.new(2),
+					{TextTransparency = 1}
+				):Play()
+	
+			end;
+			task.spawn(C_8);
+			-- StarterGui.ExecError.Frame.MoveIn
+			local function C_9()
+				local script = G2L["9"];
+				local TweenService = game:GetService('TweenService')
+				local Frame1 = script.Parent
+	
+				Frame1:TweenPosition(UDim2.new(1, -5,1, -5), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, .3, false)
+			end;
+			task.spawn(C_9);
+			-- StarterGui.ExecError.Frame.Deletion
+			local function C_a()
+				local script = G2L["a"];
+				wait(7)
+				script.Parent.Parent:Destroy()
+			end;
+			task.spawn(C_a);
+	
+			return G2L["1"], require;
+		else
+			-- Instances: 10 | Scripts: 3 | Modules: 0 | Tags: 0
+			local G2L = {};
+	
+			-- StarterGui.ScriptExecutedNotify
+			G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+			G2L["1"]["Name"] = [[ScriptExecutedNotify]];
+			G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+			G2L["1"]["ResetOnSpawn"] = false;
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame
+			G2L["2"] = Instance.new("Frame", G2L["1"]);
+			G2L["2"]["BorderSizePixel"] = 0;
+			G2L["2"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 33);
+			G2L["2"]["AnchorPoint"] = Vector2.new(1, 1);
+			G2L["2"]["Size"] = UDim2.new(0, 266, 0, 96);
+			G2L["2"]["Position"] = UDim2.new(1, 266, 1, -5);
+			G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame.Gradient
+			G2L["3"] = Instance.new("Frame", G2L["2"]);
+			G2L["3"]["BorderSizePixel"] = 0;
+			G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["3"]["Size"] = UDim2.new(1, 0, 1, 0);
+			G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["3"]["Name"] = [[Gradient]];
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame.Gradient.UIGradient
+			G2L["4"] = Instance.new("UIGradient", G2L["3"]);
+			G2L["4"]["Rotation"] = 90;
+			G2L["4"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 1),NumberSequenceKeypoint.new(1.000, 0)};
+			G2L["4"]["Offset"] = Vector2.new(-0.00454, 0.375);
+			G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame.UICorner
+			G2L["5"] = Instance.new("UICorner", G2L["2"]);
+			G2L["5"]["CornerRadius"] = UDim.new(0, 3);
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame.ImageLabel
+			G2L["6"] = Instance.new("ImageLabel", G2L["2"]);
+			G2L["6"]["BorderSizePixel"] = 0;
+			G2L["6"]["ScaleType"] = Enum.ScaleType.Fit;
+			G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+			G2L["6"]["ImageColor3"] = Color3.fromRGB(87, 157, 215);
+			G2L["6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+			G2L["6"]["Image"] = [[rbxassetid://10723415903]];
+			G2L["6"]["Size"] = UDim2.new(0, 52, 0, 52);
+			G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["6"]["BackgroundTransparency"] = 1;
+			G2L["6"]["Position"] = UDim2.new(0, 231, 0, 47);
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame.TextLabel
+			G2L["7"] = Instance.new("TextLabel", G2L["2"]);
+			G2L["7"]["BorderSizePixel"] = 0;
+			G2L["7"]["TextSize"] = 12;
+			G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+			G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+			G2L["7"]["FontFace"] = Font.new([[rbxassetid://12187361718]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+			G2L["7"]["TextColor3"] = Color3.fromRGB(221, 221, 221);
+			G2L["7"]["BackgroundTransparency"] = 1;
+			G2L["7"]["Size"] = UDim2.new(0, 193, 0, 52);
+			G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+			G2L["7"]["Text"] = [[Script Executed Successfully]];
+			G2L["7"]["Position"] = UDim2.new(0, 10, 0.21875, 0);
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame.FadeOut
+			G2L["8"] = Instance.new("LocalScript", G2L["2"]);
+			G2L["8"]["Name"] = [[FadeOut]];
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame.MoveIn
+			G2L["9"] = Instance.new("LocalScript", G2L["2"]);
+			G2L["9"]["Name"] = [[MoveIn]];
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame.Deletion
+			G2L["a"] = Instance.new("LocalScript", G2L["2"]);
+			G2L["a"]["Name"] = [[Deletion]];
+	
+	
+			-- StarterGui.ScriptExecutedNotify.Frame.FadeOut
+			local function C_8()
+				local script = G2L["8"];
+				local TweenService = game:GetService('TweenService')
+				local Frame1 = script.Parent
+				local Gradient = Frame1.Gradient.UIGradient
+				local Image = Frame1.ImageLabel
+				local Text = Frame1.TextLabel
+	
+				-- Wait 5 seconds before starting the fade
+				wait(5)
+	
+				Gradient.Rotation = -90
+	
+				-- Fade out the Frame background
+				TweenService:Create(
+					Frame1,
+					TweenInfo.new(2),
+					{BackgroundTransparency = 1} -- fully transparent
+				):Play()
+	
+				-- Make the gradient fade properly
+				local value = Instance.new("NumberValue")
+				value.Value = 0 -- start fully visible
+	
+				value:GetPropertyChangedSignal("Value"):Connect(function()
+					Gradient.Transparency = NumberSequence.new({
+						NumberSequenceKeypoint.new(0, value.Value), -- start of gradient
+						NumberSequenceKeypoint.new(1, 1)           -- end of gradient (time = 1)
+					})
+				end)
+	
+				-- Tween the gradient to fade out over 2 seconds
+				TweenService:Create(value, TweenInfo.new(2), {Value = 1}):Play()
+	
+				-- Fade out Image and Text
+				TweenService:Create(
+					Image,
+					TweenInfo.new(2),
+					{ImageTransparency = 1}
+				):Play()
+	
+				TweenService:Create(
+					Text,
+					TweenInfo.new(2),
+					{TextTransparency = 1}
+				):Play()
+	
+				if script.Parent.BackgroundTransparency == 1 then
+					script.Parent.Parent:Destroy()
+				end
+			end;
+			task.spawn(C_8);
+			-- StarterGui.ScriptExecutedNotify.Frame.MoveIn
+			local function C_9()
+				local script = G2L["9"];
+				local TweenService = game:GetService('TweenService')
+				local Frame1 = script.Parent
+	
+				Frame1:TweenPosition(UDim2.new(1, -5,1, -5), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, .3, false)
+			end;
+			task.spawn(C_9);
+			-- StarterGui.ScriptExecutedNotify.Frame.Deletion
+			local function C_a()
+				local script = G2L["a"];
+				wait(7)
+				script.Parent.Parent:Destroy()
+			end;
+			task.spawn(C_a);
+	
+			return G2L["1"], require;
+		end
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		executeWithVlua(script.Parent.Parent.Parent.CodeEditor.Code.Text)
+	end)
+end
+local function PWPYM_fake_script() -- Fake Script: StarterGui.PlayerGui.Background.Buttons.Clear.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_Clear"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local codeEditor = script.Parent.Parent.Parent.CodeEditor
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		codeEditor.Code.Text = ""
+	end)
+end
+local function FTXG_fake_script() -- Fake Script: StarterGui.PlayerGui.Background.TopBar.ImageButton.KeybindPopup
+    local script = Instance.new("LocalScript")
+    script.Name = "KeybindPopup"
+    script.Parent = Converted["_ImageButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	script.Parent.MouseButton1Click:Connect(function()
+		script.Parent.Parent.Parent.Parent.Enabled = false
+		
+		
+	end)
+end
+local function SBAHQ_fake_script() -- Fake Script: StarterGui.PlayerGui.Background.TopBar.ImageButton.LocalScript
+    local script = Instance.new("LocalScript")
+    script.Name = "LocalScript"
+    script.Parent = Converted["_ImageButton"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	function Popup()
+		--[=[
+	 d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+	88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+	88      88    88    88            odD'      88      88    88 88ooo88 
+	88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+	88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+	 Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+	]=]
+	
+		-- Instances: 10 | Scripts: 3 | Modules: 0 | Tags: 0
+		local G2L = {};
+	
+		-- StarterGui.OpenKeybind
+		G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+		G2L["1"]["Name"] = [[OpenKeybind]];
+		G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+		G2L["1"]["ResetOnSpawn"] = false;
+	
+	
+		-- StarterGui.OpenKeybind.Frame
+		G2L["2"] = Instance.new("Frame", G2L["1"]);
+		G2L["2"]["BorderSizePixel"] = 0;
+		G2L["2"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 33);
+		G2L["2"]["AnchorPoint"] = Vector2.new(1, 1);
+		G2L["2"]["Size"] = UDim2.new(0, 266, 0, 96);
+		G2L["2"]["Position"] = UDim2.new(1, 266, 1, -5);
+		G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+	
+	
+		-- StarterGui.OpenKeybind.Frame.Gradient
+		G2L["3"] = Instance.new("Frame", G2L["2"]);
+		G2L["3"]["BorderSizePixel"] = 0;
+		G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+		G2L["3"]["Size"] = UDim2.new(1, 0, 1, 0);
+		G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+		G2L["3"]["Name"] = [[Gradient]];
+	
+	
+		-- StarterGui.OpenKeybind.Frame.Gradient.UIGradient
+		G2L["4"] = Instance.new("UIGradient", G2L["3"]);
+		G2L["4"]["Rotation"] = 90;
+		G2L["4"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 1),NumberSequenceKeypoint.new(1.000, 0)};
+		G2L["4"]["Offset"] = Vector2.new(-0.00454, 0.375);
+		G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+	
+	
+		-- StarterGui.OpenKeybind.Frame.UICorner
+		G2L["5"] = Instance.new("UICorner", G2L["2"]);
+		G2L["5"]["CornerRadius"] = UDim.new(0, 3);
+	
+	
+		-- StarterGui.OpenKeybind.Frame.ImageLabel
+		G2L["6"] = Instance.new("ImageLabel", G2L["2"]);
+		G2L["6"]["BorderSizePixel"] = 0;
+		G2L["6"]["ScaleType"] = Enum.ScaleType.Fit;
+		G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+		-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+		G2L["6"]["ImageColor3"] = Color3.fromRGB(87, 157, 215);
+		G2L["6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+		G2L["6"]["Image"] = [[rbxassetid://10723415903]];
+		G2L["6"]["Size"] = UDim2.new(0, 52, 0, 52);
+		G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+		G2L["6"]["BackgroundTransparency"] = 1;
+		G2L["6"]["Position"] = UDim2.new(0, 231, 0, 47);
+	
+	
+		-- StarterGui.OpenKeybind.Frame.TextLabel
+		G2L["7"] = Instance.new("TextLabel", G2L["2"]);
+		G2L["7"]["BorderSizePixel"] = 0;
+		G2L["7"]["TextSize"] = 12;
+		G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+		G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+		G2L["7"]["FontFace"] = Font.new([[rbxassetid://12187361718]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+		G2L["7"]["TextColor3"] = Color3.fromRGB(221, 221, 221);
+		G2L["7"]["BackgroundTransparency"] = 1;
+		G2L["7"]["Size"] = UDim2.new(0, 193, 0, 52);
+		G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+		G2L["7"]["Text"] = [[Press F3 to reopen UI]];
+		G2L["7"]["Position"] = UDim2.new(0, 10, 0.21875, 0);
+	
+	
+		-- StarterGui.OpenKeybind.Frame.FadeOut
+		G2L["8"] = Instance.new("LocalScript", G2L["2"]);
+		G2L["8"]["Name"] = [[FadeOut]];
+	
+	
+		-- StarterGui.OpenKeybind.Frame.MoveIn
+		G2L["9"] = Instance.new("LocalScript", G2L["2"]);
+		G2L["9"]["Name"] = [[MoveIn]];
+	
+	
+		-- StarterGui.OpenKeybind.Frame.Deletion
+		G2L["a"] = Instance.new("LocalScript", G2L["2"]);
+		G2L["a"]["Name"] = [[Deletion]];
+	
+	
+		-- StarterGui.OpenKeybind.Frame.FadeOut
+		local function C_8()
+			local script = G2L["8"];
+			local TweenService = game:GetService('TweenService')
+			local Frame1 = script.Parent
+			local Gradient = Frame1.Gradient.UIGradient
+			local Image = Frame1.ImageLabel
+			local Text = Frame1.TextLabel
+	
+			-- Wait 5 seconds before starting the fade
+			wait(5)
+	
+			Gradient.Rotation = -90
+	
+			-- Fade out the Frame background
+			TweenService:Create(
+				Frame1,
+				TweenInfo.new(2),
+				{BackgroundTransparency = 1} -- fully transparent
+			):Play()
+	
+			-- Make the gradient fade properly
+			local value = Instance.new("NumberValue")
+			value.Value = 0 -- start fully visible
+	
+			value:GetPropertyChangedSignal("Value"):Connect(function()
+				Gradient.Transparency = NumberSequence.new({
+					NumberSequenceKeypoint.new(0, value.Value), -- start of gradient
+					NumberSequenceKeypoint.new(1, 1)           -- end of gradient (time = 1)
+				})
+			end)
+	
+			-- Tween the gradient to fade out over 2 seconds
+			TweenService:Create(value, TweenInfo.new(2), {Value = 1}):Play()
+	
+			-- Fade out Image and Text
+			TweenService:Create(
+				Image,
+				TweenInfo.new(2),
+				{ImageTransparency = 1}
+			):Play()
+	
+			TweenService:Create(
+				Text,
+				TweenInfo.new(2),
+				{TextTransparency = 1}
+			):Play()
+	
+			if script.Parent.BackgroundTransparency == 1 then
+				script.Parent.Parent:Destroy()
+			end
+		end;
+		task.spawn(C_8);
+		-- StarterGui.OpenKeybind.Frame.MoveIn
+		local function C_9()
+			local script = G2L["9"];
+			local TweenService = game:GetService('TweenService')
+			local Frame1 = script.Parent
+	
+			Frame1:TweenPosition(UDim2.new(1, -5,1, -5), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, .3, false)
+		end;
+		task.spawn(C_9);
+		-- StarterGui.OpenKeybind.Frame.Deletion
+		local function C_a()
+			local script = G2L["a"];
+			wait(7)
+			script.Parent.Parent:Destroy()
+		end;
+		task.spawn(C_a);
+	
+		return G2L["1"], require;
+	end
+	
+	script.Parent.MouseButton1Click:Connect(function()
+		Popup()
+		wait(10)
+		script:Destroy()
+	end)
+end
+local function QQKQAJR_fake_script() -- Fake Script: StarterGui.PlayerGui.Background.DragScript
+    local script = Instance.new("LocalScript")
+    script.Name = "DragScript"
+    script.Parent = Converted["_Background"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	--Not made by me, check out this video: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	--Put this inside of your Frame and configure the speed if you would like.
+	--Enjoy! Credits go to: https://www.youtube.com/watch?v=z25nyNBG7Js&t=22s
+	
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+	
+end
+local function VTXCR_fake_script() -- Fake Script: StarterGui.PlayerGui.Background.InjectedNotifyScript
+    local script = Instance.new("LocalScript")
+    script.Name = "InjectedNotifyScript"
+    script.Parent = Converted["_Background"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	--[=[
+	 d888b  db    db d888888b      .d888b.      db      db    db  .d8b.  
+	88' Y8b 88    88   `88'        VP  `8D      88      88    88 d8' `8b 
+	88      88    88    88            odD'      88      88    88 88ooo88 
+	88  ooo 88    88    88          .88'        88      88    88 88~~~88 
+	88. ~8~ 88b  d88   .88.        j88.         88booo. 88b  d88 88   88    @uniquadev
+	 Y888P  ~Y8888P' Y888888P      888888D      Y88888P ~Y8888P' YP   YP  CONVERTER 
+	]=]
+	
+	-- Instances: 9 | Scripts: 2 | Modules: 0 | Tags: 0
+	local G2L = {};
+	
+	-- StarterGui.InjectedNotify
+	G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
+	G2L["1"]["Name"] = [[InjectedNotify]];
+	G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
+	G2L["1"]["ResetOnSpawn"] = false;
+	
+	
+	-- StarterGui.InjectedNotify.Frame
+	G2L["2"] = Instance.new("Frame", G2L["1"]);
+	G2L["2"]["BorderSizePixel"] = 0;
+	G2L["2"]["BackgroundColor3"] = Color3.fromRGB(34, 34, 33);
+	G2L["2"]["AnchorPoint"] = Vector2.new(1, 1);
+	G2L["2"]["Size"] = UDim2.new(0, 266, 0, 96);
+	G2L["2"]["Position"] = UDim2.new(1, 266, 1, -5);
+	G2L["2"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+	
+	
+	-- StarterGui.InjectedNotify.Frame.Gradient
+	G2L["3"] = Instance.new("Frame", G2L["2"]);
+	G2L["3"]["BorderSizePixel"] = 0;
+	G2L["3"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["3"]["Size"] = UDim2.new(1, 0, 1, 0);
+	G2L["3"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["3"]["Name"] = [[Gradient]];
+	
+	
+	-- StarterGui.InjectedNotify.Frame.Gradient.UIGradient
+	G2L["4"] = Instance.new("UIGradient", G2L["3"]);
+	G2L["4"]["Rotation"] = 90;
+	G2L["4"]["Transparency"] = NumberSequence.new{NumberSequenceKeypoint.new(0.000, 1),NumberSequenceKeypoint.new(1.000, 0)};
+	G2L["4"]["Offset"] = Vector2.new(-0.00454, 0.375);
+	G2L["4"]["Color"] = ColorSequence.new{ColorSequenceKeypoint.new(0.000, Color3.fromRGB(0, 0, 0)),ColorSequenceKeypoint.new(1.000, Color3.fromRGB(26, 26, 26))};
+	
+	
+	-- StarterGui.InjectedNotify.Frame.UICorner
+	G2L["5"] = Instance.new("UICorner", G2L["2"]);
+	G2L["5"]["CornerRadius"] = UDim.new(0, 3);
+	
+	
+	-- StarterGui.InjectedNotify.Frame.ImageLabel
+	G2L["6"] = Instance.new("ImageLabel", G2L["2"]);
+	G2L["6"]["BorderSizePixel"] = 0;
+	G2L["6"]["ScaleType"] = Enum.ScaleType.Fit;
+	G2L["6"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	-- [ERROR] cannot convert ImageContent, please report to "https://github.com/uniquadev/GuiToLuaConverter/issues"
+	G2L["6"]["ImageColor3"] = Color3.fromRGB(121, 191, 121);
+	G2L["6"]["AnchorPoint"] = Vector2.new(0.5, 0.5);
+	G2L["6"]["Image"] = [[rbxassetid://10723415903]];
+	G2L["6"]["Size"] = UDim2.new(0, 52, 0, 52);
+	G2L["6"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["6"]["BackgroundTransparency"] = 1;
+	G2L["6"]["Position"] = UDim2.new(0, 231, 0, 47);
+	
+	
+	-- StarterGui.InjectedNotify.Frame.TextLabel
+	G2L["7"] = Instance.new("TextLabel", G2L["2"]);
+	G2L["7"]["BorderSizePixel"] = 0;
+	G2L["7"]["TextSize"] = 12;
+	G2L["7"]["TextXAlignment"] = Enum.TextXAlignment.Left;
+	G2L["7"]["BackgroundColor3"] = Color3.fromRGB(255, 255, 255);
+	G2L["7"]["FontFace"] = Font.new([[rbxassetid://12187361718]], Enum.FontWeight.Regular, Enum.FontStyle.Normal);
+	G2L["7"]["TextColor3"] = Color3.fromRGB(221, 221, 221);
+	G2L["7"]["BackgroundTransparency"] = 1;
+	G2L["7"]["Size"] = UDim2.new(0, 193, 0, 52);
+	G2L["7"]["BorderColor3"] = Color3.fromRGB(0, 0, 0);
+	G2L["7"]["Text"] = [[Injected Sucessfully]];
+	G2L["7"]["Position"] = UDim2.new(0, 10, 0.21875, 0);
+	
+	
+	-- StarterGui.InjectedNotify.Frame.FadeOut
+	G2L["8"] = Instance.new("LocalScript", G2L["2"]);
+	G2L["8"]["Name"] = [[FadeOut]];
+	
+	
+	-- StarterGui.InjectedNotify.Frame.MoveIn
+	G2L["9"] = Instance.new("LocalScript", G2L["2"]);
+	G2L["9"]["Name"] = [[MoveIn]];
+	
+	
+	-- StarterGui.InjectedNotify.Frame.FadeOut
+	local function C_8()
+		local script = G2L["8"];
+		local TweenService = game:GetService('TweenService')
+		local Frame1 = script.Parent
+		local Gradient = Frame1.Gradient.UIGradient
+		local Image = Frame1.ImageLabel
+		local Text = Frame1.TextLabel
+	
+		-- Wait 5 seconds before starting the fade
+		wait(5)
+	
+		Gradient.Rotation = -90
+	
+		-- Fade out the Frame background
+		TweenService:Create(
+			Frame1,
+			TweenInfo.new(2),
+			{BackgroundTransparency = 1} -- fully transparent
+		):Play()
+	
+		-- Make the gradient fade properly
+		local value = Instance.new("NumberValue")
+		value.Value = 0 -- start fully visible
+	
+		value:GetPropertyChangedSignal("Value"):Connect(function()
+			Gradient.Transparency = NumberSequence.new({
+				NumberSequenceKeypoint.new(0, value.Value), -- start of gradient
+				NumberSequenceKeypoint.new(1, 1)           -- end of gradient (time = 1)
+			})
+		end)
+	
+		-- Tween the gradient to fade out over 2 seconds
+		TweenService:Create(value, TweenInfo.new(2), {Value = 1}):Play()
+	
+		-- Fade out Image and Text
+		TweenService:Create(
+			Image,
+			TweenInfo.new(2),
+			{ImageTransparency = 1}
+		):Play()
+	
+		TweenService:Create(
+			Text,
+			TweenInfo.new(2),
+			{TextTransparency = 1}
+		):Play()
+	end;
+	task.spawn(C_8);
+	-- StarterGui.InjectedNotify.Frame.MoveIn
+	local function C_9()
+		local script = G2L["9"];
+		local TweenService = game:GetService('TweenService')
+		local Frame1 = script.Parent
+	
+		Frame1:TweenPosition(UDim2.new(1, -5,1, -5), Enum.EasingDirection.Out, Enum.EasingStyle.Linear, .3, false)
+	end;
+	task.spawn(C_9);
+	
+	return G2L["1"], require;
+end
+local function WOHKS_fake_script() -- Fake Script: StarterGui.PlayerGui.Open
+    local script = Instance.new("LocalScript")
+    script.Name = "Open"
+    script.Parent = Converted["_PlayerGui"]
+    local req = require
+    local require = function(obj)
+        local fake = fake_module_scripts[obj]
+        if fake then
+            return fake()
+        end
+        return req(obj)
+    end
+
+	local UserInputService = game:GetService("UserInputService")
+	local gui = script.Parent
+	
+	UserInputService.InputBegan:Connect(function(input, gameProcessed)
+		if gameProcessed then return end -- ignore input that the game already processed
+		if input.KeyCode == Enum.KeyCode.F3 then
+			gui.Enabled = true
+		end
+	end)
+end
+
+coroutine.wrap(EUDY_fake_script)()
+coroutine.wrap(GHPSFVW_fake_script)()
+coroutine.wrap(KVXYY_fake_script)()
+coroutine.wrap(UBSQGQ_fake_script)()
+coroutine.wrap(PWPYM_fake_script)()
+coroutine.wrap(FTXG_fake_script)()
+coroutine.wrap(SBAHQ_fake_script)()
+coroutine.wrap(QQKQAJR_fake_script)()
+coroutine.wrap(VTXCR_fake_script)()
+coroutine.wrap(WOHKS_fake_script)()
